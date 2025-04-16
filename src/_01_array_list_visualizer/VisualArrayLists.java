@@ -2,6 +2,7 @@ package _01_array_list_visualizer;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.JFrame;
 import javax.swing.Timer;
@@ -22,11 +23,16 @@ public class VisualArrayLists implements ActionListener {
 		list.add("Sisyphus");
 		list.add("Gabriel");
 		// 2. Set one item in our list to be something different
-		
+		list.add("Nyx");
 		// 3. Remove something from our list
-		
+		Random ran = new Random();
+		int number1 = ran.nextInt(list.size());
+		list.remove(number1);
 		// 4. Print the size of our list
-		
+		for(int i = 0; i < list.size(); i++){
+			String s = list.get(i);
+			System.out.println(s);
+		}
 		// 5. Check if our list contains a specific thing of your choice
 		//	  and print whether it is in the list or not.
 		
