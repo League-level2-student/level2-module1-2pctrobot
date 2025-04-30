@@ -35,12 +35,20 @@ public class VisualArrayLists implements ActionListener {
 		}
 		// 5. Check if our list contains a specific thing of your choice
 		//	  and print whether it is in the list or not.
-		
+		if(list.contains("Nyx")) {
+			System.out.println("Ja");
+		} else {
+			System.out.println("Nein");
+		}
 		// 6. Get a specific item from our list and print it out
-		
+		System.out.println(list.get(3));
 		// 7. Clear our list of all items
-		
+		list.clear();
 		// 8. Print the size of our list again
+		for(int i = 0; i < list.size(); i++){
+			String s = list.get(i);
+			System.out.println(s);
+		}
 	}
 	
 	
