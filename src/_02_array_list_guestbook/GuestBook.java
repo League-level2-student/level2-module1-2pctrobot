@@ -23,6 +23,11 @@ public class GuestBook implements ActionListener {
 	ArrayList<String> names;
 	
 	public static void main(String[] args) {
+		GuestBook book = new GuestBook();
+		book.run();
+		
+	}
+	public void run() {
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		JButton button1 = new JButton();
@@ -34,19 +39,24 @@ public class GuestBook implements ActionListener {
 		button1.setText("Add Name");
 		button2.setText("View Name");
 		frame.setSize(100, 100);
-		button1.addActionListener(null);
-		button2.addActionListener(null);
 		frame.setVisible(true);
-		
+		button1.addActionListener(this);
+		button2.addActionListener(this);
 	}
-
+	
 	@Override
+	
 	public void actionPerformed(ActionEvent e) {
 		JButton buttonClicked = (JButton)e.getSource();
 		// TODO Auto-generated method stub
 		if(buttonClicked.getText().equals("Add Name")) {
 			String addition = JOptionPane.showInputDialog("Give me a name");
 			names.add(addition);
+		}else {
+			for(int i = 0; i < names.size(); i++){
+				String s = names.get(i);
+				System.out.println("Reservation " + (i+1) + ": " + s);
+			}
 		}
 	}
 }

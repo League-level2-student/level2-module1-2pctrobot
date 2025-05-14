@@ -23,7 +23,7 @@ public class VisualArrayLists implements ActionListener {
 		list.add("Sisyphus");
 		list.add("Gabriel");
 		// 2. Set one item in our list to be something different
-		list.add("Nyx");
+		list.add("Jakito");
 		// 3. Remove something from our list
 		Random ran = new Random();
 		int number1 = ran.nextInt(list.size());
@@ -35,7 +35,7 @@ public class VisualArrayLists implements ActionListener {
 		}
 		// 5. Check if our list contains a specific thing of your choice
 		//	  and print whether it is in the list or not.
-		if(list.contains("Nyx")) {
+		if(list.contains("Jakito")) {
 			System.out.println("Ja");
 		} else {
 			System.out.println("Nein");
